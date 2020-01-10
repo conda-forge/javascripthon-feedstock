@@ -4,12 +4,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 --- src/metapensiero/pj/transformations/obvious.py	(revision e8a9727d87f0b83af669481c51a773fe98d73efc)
-+++ src/metapensiero/pj/transformations/obvious.py	(revision 456030c0ff1b7037223aa84926baed04f1fa5462)
-@@ -278,6 +278,9 @@
++++ src/metapensiero/pj/transformations/obvious.py	(revision 86e9de7f9f2bd7b5e52ebf52fec49d3a67a063a9)
+@@ -278,6 +278,17 @@
      return cls()
  
  
-+Constant = NameConstant
++# Take care of Python 3.8's deprecations:
++# https://docs.python.org/3/library/ast.html#node-classes
++def Constant(t, x):
++    if isinstance(x.value, (int, float, complex)):
++        return Num(t, x)
++    elif isinstance(x.value, str):
++        return Str(t, x)
++    else:
++        return NameConstant(t, x)
 +
 +
  def Yield(t, x):
