@@ -35,7 +35,7 @@ test:
     - pj --help
 
 about:
-  home: https://github.com/metapensiero/metapensiero.pj
+  home: https://gitlab.com/metapensiero/metapensiero.pj
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
