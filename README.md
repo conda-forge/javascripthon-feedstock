@@ -1,7 +1,7 @@
 About javascripthon
 ===================
 
-Home: https://github.com/metapensiero/metapensiero.pj
+Home: https://gitlab.com/metapensiero/metapensiero.pj
 
 Package license: GPL-3.0
 
