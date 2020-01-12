@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - pj = metapensiero.pj.__main__:main
@@ -35,7 +35,7 @@ test:
     - pj --help
 
 about:
-  home: https://github.com/metapensiero/metapensiero.pj
+  home: https://gitlab.com/metapensiero/metapensiero.pj
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
