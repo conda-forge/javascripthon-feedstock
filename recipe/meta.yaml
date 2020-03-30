@@ -1,5 +1,5 @@
 {% set name = "javascripthon" %}
-{% set version = "0.10" %}
+{% set version = "0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 95fc362624513c5f0ec0ee0f355cf26807621da6fb94af94b0cf0ed313e4e957
-  patches:
-    - py38.patch
+  sha256: 16077e073721507dbea175465cf52b30b7bb16a178a346b5834ae41d95463ad9
 
 build:
   noarch: python
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pj = metapensiero.pj.__main__:main
 
@@ -36,7 +34,7 @@ test:
 
 about:
   home: https://gitlab.com/metapensiero/metapensiero.pj
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'Javascript for refined palates: a Python 3 to ES6 Javascript translator.'
@@ -44,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - hoechenberger
+    - kastman
