@@ -1,5 +1,5 @@
 {% set name = "javascripthon" %}
-{% set version = "0.11" %}
+{% set version = "0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16077e073721507dbea175465cf52b30b7bb16a178a346b5834ae41d95463ad9
+  sha256: ec00ba71991043069e436ae200b58a0e2532fba30fa456d6b4b51ff7fc5b797d
 
 build:
   noarch: python
@@ -18,13 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
-    - pytest-runner
   run:
-    - python >=3.5
+    - python >=3.7
+    - setuptools
     - dukpy
-    - macropy3 >=1.1.0b2
 
 test:
   imports:
