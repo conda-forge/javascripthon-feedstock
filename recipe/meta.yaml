@@ -1,5 +1,5 @@
 {% set name = "javascripthon" %}
-{% set version = "0.12" %}
+{% set version = "0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ec00ba71991043069e436ae200b58a0e2532fba30fa456d6b4b51ff7fc5b797d
+  sha256: aef945c3c544f3c527b6497a01a3e057d2049b9a2f660f99ad0cf1da7995bfdb
 
 build:
   noarch: python
